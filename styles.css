@@ -1,0 +1,12 @@
+button {
+    box-sizing: border-box;
+    padding: 6px 12px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    min-width: 80px;
+    max-width: 120px;
+    gap: 14px;
+}
