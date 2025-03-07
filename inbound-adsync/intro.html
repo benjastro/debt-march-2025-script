@@ -7,17 +7,24 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <h1>Debt Script</h1>
-    <h2>Introduction</h2>
-    <p>
-        Hello! I am (agent's name) from LUX on a recorded line, We are providing assistance when it comes to credit card debts.
-        <br><br>I have a few options that may help you resolve this debt, and I just need to ask a few quick questions to determine if you qualify.
-        <br><br>May I know who I am speaking with?
-        <br><br>Your phone number is (XXX-XXX-XXXX please state the phone number showing in Vici)
-        <br><br>May I have your complete address?
-        <br><br>After you gathered all the information of the lead, please proceed to Question #1.
-    </p>
-    <button onclick="window.location.href='../part/mandatory-question.html'">Next</button>
-    <br><br><button onclick="window.location.href='../index.html'">Homepage</button>
+    <div id="left-panel">
+        <h1>Debt Script</h1>
+        <h2>Introduction</h2>
+        <p>
+            Hello! I am (agent's name) from LUX on a recorded line, We are providing assistance when it comes to credit card debts.
+            <br><br>I have a few options that may help you resolve this debt, and I just need to ask a few quick questions to determine if you qualify.
+            <br><br>May I know who I am speaking with?
+            <br><br>Your phone number is (XXX-XXX-XXXX please state the phone number showing in Vici)
+            <br><br>May I have your complete address?
+            <br><br>After you gathered all the information of the lead, please proceed to Question #1.
+        </p>
+        <button onclick="window.location.href='../part/mandatory-question.html'">Next</button>
+        <br><br><button onclick="window.location.href='../index.html'">Homepage</button>
+    </div>
+    <div id="right-panel"></div>
+    <script src="../functions.js"></script>
+    <script>
+        putElement("right-panel", createTransferPresetsPanel());
+    </script>
 </body>
 </html>

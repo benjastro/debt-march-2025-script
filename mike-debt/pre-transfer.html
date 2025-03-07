@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt 2025 Script</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        let nextLink = './soft-credit-pull.html';
+        if (urlParams.has('asked-soft-credit') && urlParams.get('asked-soft-credit') == "true") {
+            nextLink = './transfer-decision.html';
+        }
+    </script>
+    <div id="left-panel">
+        <h1>Debt Script</h1>
+        <h2>Pre-transfer</h2>
+        Ok, based on your answers, it appears that you’d be a great candidate for our debt relief options.
+        <br><br><button onclick="window.location.href=nextLink">Next</button>
+        <br><br><button onclick="window.location.href='../index.html'">Homepage</button>
+    </div>
+    <div id="right-panel"></div>
+    <script src="../functions.js"></script>
+    <script>
+        putElement("right-panel", createTransferPresetsPanel());
+    </script>
+</body>
+</html>

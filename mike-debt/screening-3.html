@@ -7,14 +7,21 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <h1>Debt Script</h1>
-    <h2>Screening</h2>
-    <p>
-        3. Can you afford a minimum payment of $250/month? 
-    </p>
-    <div class="menu">
-        <button onclick="window.location.href='./do-not-proceed.html'">Yes</button>
-        <button onclick="window.location.href='./collect-information.html'">No</button>
+    <div id="left-panel">
+        <h1>Debt Script</h1>
+        <h2>Screening</h2>
+        <p>
+            3. Can you afford a minimum payment of $250/month? 
+        </p>
+        <div class="menu">
+            <button onclick="window.location.href='./pre-transfer.html' + window.location.search">Yes</button>
+            <button onclick="window.location.href='./do-not-proceed.html'">No</button>
+        </div>
     </div>
+    <div id="right-panel"></div>
+    <script src="../functions.js"></script>
+    <script>
+        putElement("right-panel", createTransferPresetsPanel());
+    </script>
 </body>
 </html>

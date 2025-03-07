@@ -7,17 +7,24 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <h1>Debt Script</h1>
-    <h2>Transfer preparation</h2>
-    <p>
-        Please wait on the line a moment and I’ll connect you with a Debt Specialist. You will hear some hold music, once an agent comes on the line, I will introduce you first
-    </p>
-    <h3>Warm transfer script</h3>
-    <p>
-        Hi, my name is [Partner Agent Name] from [Debt Relief Center]. I have [Clients Name] on the line, they have [Amount of Unsecured Debt] in [Type of Debt] - Are you ready? 
-        <br>
-        <br>Once the NDR Agent says YES, the Partner Agent may wish the client well and leave the call.  
-    </p>
-    <button onclick="window.location.href='../index.html'">Homepage</button>
+    <div id="left-panel">
+        <h1>Debt Script</h1>
+        <h2>Transfer preparation</h2>
+        <p>
+            Please wait on the line a moment and I’ll connect you with a Debt Specialist. You will hear some hold music, once an agent comes on the line, I will introduce you first
+        </p>
+        <h3>Warm transfer script</h3>
+        <p>
+            Hi, my name is [Partner Agent Name] from [Debt Relief Center]. I have [Clients Name] on the line, they have [Amount of Unsecured Debt] in [Type of Debt] - Are you ready? 
+            <br>
+            <br>Once the NDR Agent says YES, the Partner Agent may wish the client well and leave the call.  
+        </p>
+        <button onclick="window.location.href='../index.html'">Homepage</button>
+    </div>
+    <div id="right-panel"></div>
+    <script src="../functions.js"></script>
+    <script>
+        putElement("right-panel", createTransferPresetsPanel());
+    </script>
 </body>
 </html>

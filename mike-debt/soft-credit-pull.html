@@ -7,16 +7,43 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <h1>Debt Script</h1>
-    <h2>Soft credit pull</h2>
-    <p>
-        And just to be 100% sure we're going to verify the debt amount so I'm going to run a quick verification of the debt information that you provided. This will not impact your credit score.
-    </p>
-    <strong>Confirm and verify debt information</strong>
-    <br>
-    <br>
-    <div class="menu">
-        <button onclick="window.location.href='./screening-2.html'">Next</button>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        let nextLink = './transfer-decision.html';
+        if (urlParams.has('next')) {
+            nextLink = urlParams.get('next') + "?asked-soft-credit=true";
+        }
+    </script>
+    <div id="left-panel">
+        <h1>Debt Script</h1>
+        <h2>Soft credit pull</h2>
+        <p>
+            And just to be 100% sure we're going to verify the debt amount so I'm going to run a quick verification of the debt information that you provided. This will not impact your credit score.
+        </p>
+        <div class="menu">
+            <button onclick="window.location.href='./do-not-proceed.html'">Client Disagree</button>
+        </div>
+        <br>
+        <hr>
+        <h2>Collect and verify debt Information</h2>
+        <p>
+            Ok, based on your answers, it appears that you'd be a great candidate for our debt relief options.
+        </p>
+        <h3>Collect address and verify name spelling.</h3>
+        <p>
+            The first thing I need is your home address.  
+            <br>
+            <br>I want to verify the spelling name.  Can you please spell out your first and last name to ensure 100% accuracy?   (REPEAT SPELLING)
+        </p>
+        <div class="menu">
+            <button onclick="window.location.href=nextLink">Next</button>
+        </div>
     </div>
+    <div id="right-panel"></div>
+    <script src="../functions.js"></script>
+    <script>
+        putElement("right-panel", createTransferPresetsPanel());
+    </script>
 </body>
 </html>

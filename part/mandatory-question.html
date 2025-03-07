@@ -7,28 +7,35 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <h1>Debt Script</h1>
-    <h2>Mandatory Quesstion for DEBT</h2>
-    <ol>
-        <li>
-            How much do you currently owe in credit card or unsecured debt? 
-            <br>Is it over $10,000 or $15,000? (Must be $10,000 or more to qualify)
-        </li>
-        <br>
-        <li>
-            Are you currently in bankruptcy? If yes, has it been discharged?
-            <br>(Must be NO to qualify)
-        </li>
-        <br>
-        <li>
-            Are you enrolled in any type of debt consolidation or settlement program?
-            <br>(Must be NO to qualify)
-        </li>
-        <br>
-        <li>
-            Do you have any source of income? MUST BE YES
-        </li>
-    </ol>
-    <button onclick="window.location.href='./permission-for-credit-check.html'">Next</button>
+    <div id="left-panel">
+        <h1>Debt Script</h1>
+        <h2>Mandatory Quesstion for DEBT</h2>
+        <ol>
+            <li>
+                How much do you currently owe in credit card or unsecured debt? 
+                <br>Is it over $10,000 or $15,000? (Must be $10,000 or more to qualify)
+            </li>
+            <br>
+            <li>
+                Are you currently in bankruptcy? If yes, has it been discharged?
+                <br>(Must be NO to qualify)
+            </li>
+            <br>
+            <li>
+                Are you enrolled in any type of debt consolidation or settlement program?
+                <br>(Must be NO to qualify)
+            </li>
+            <br>
+            <li>
+                Do you have any source of income? MUST BE YES
+            </li>
+        </ol>
+        <button onclick="window.location.href='./permission-for-credit-check.html'">Next</button>
+    </div>
+    <div id="right-panel"></div>
+    <script src="../functions.js"></script>
+    <script>
+        putElement("right-panel", createTransferPresetsPanel());
+    </script>
 </body>
 </html>

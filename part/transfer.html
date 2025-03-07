@@ -7,16 +7,23 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <h1>Debt Script</h1>
-    <h2>Transfer</h2>
-    <h3>Preparation for transfer</h3>
-    <p>
-        Great! Based on your answers, you are pre-qualified for the program. Please hold while I transfer you to a top-rated company that has helped thousands of people reduce their debt.
-    </p>
-    <h3>Warm transfer</h3>
-    <p>
-        Hi I have Client's name on the line. She has (debt amount) in debt and is pre-qualified for the program. Go ahead now, Mr./s (US REP)…
-    </p>
-    <button onclick="window.location.href='../index.html'">Homepage</button>
+    <div id="left-panel">
+        <h1>Debt Script</h1>
+        <h2>Transfer</h2>
+        <h3>Preparation for transfer</h3>
+        <p>
+            Great! Based on your answers, you are pre-qualified for the program. Please hold while I transfer you to a top-rated company that has helped thousands of people reduce their debt.
+        </p>
+        <h3>Warm transfer</h3>
+        <p>
+            Hi I have Client's name on the line. She has (debt amount) in debt and is pre-qualified for the program. Go ahead now, Mr./s (US REP)…
+        </p>
+        <button onclick="window.location.href='../index.html'">Homepage</button>
+    </div>
+    <div id="right-panel"></div>
+    <script src="../functions.js"></script>
+    <script>
+        putElement("right-panel", createTransferPresetsPanel());
+    </script>
 </body>
 </html>
