@@ -8,9 +8,9 @@ function createTransferPresetsPanel() {
     panel.innerHTML = 
     `<h2>Transfer Presets</h2>
     <p>
-        <strong>DEBT OB</strong> - All outbound converted debt transfer
-        <br><br><strong>DEBT AFF</strong> - All affs converted debt transfer
-        <br><br><strong>DEBT ADSYNC</strong> - All adsync converted debt transfer
+        <strong>DEBT OB</strong> - O15K - All outbound converted debt transfer
+        <br><br><strong>DEBT AFF</strong> - O15K - All affs converted debt transfer
+        <br><br><strong>DEBT ADSYNC</strong> - O15K - All adsync converted debt transfer
     </p>
     `;
 
